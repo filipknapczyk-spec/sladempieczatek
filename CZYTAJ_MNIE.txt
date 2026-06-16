@@ -1,0 +1,58 @@
+====================================================
+  ŚLADEM PIECZĄTEK — INSTRUKCJA URUCHOMIENIA
+====================================================
+
+WYMAGANIE WSTĘPNE (jednorazowo):
+---------------------------------
+Aplikacja wymaga zainstalowanego Pythona (wersja 3.9 lub nowsza).
+
+Jeśli nie masz Pythona:
+  1. Wejdź na stronę: https://www.python.org/downloads/
+  2. Pobierz najnowszą wersję (przycisk "Download Python 3.x.x")
+  3. Uruchom instalator — WAŻNE: zaznacz opcję "Add Python to PATH"
+  4. Kliknij "Install Now"
+
+
+JAK URUCHOMIĆ APLIKACJĘ:
+-------------------------
+  Kliknij dwukrotnie plik:  URUCHOM.bat
+
+  Przy PIERWSZYM uruchomieniu:
+  - Skrypt automatycznie zainstaluje wymagane biblioteki
+  - Może to potrwać 1-2 minuty (tylko raz!)
+  - Po instalacji otworzy się przeglądarka z aplikacją
+
+  Przy KOLEJNYCH uruchomieniach:
+  - Aplikacja uruchamia się od razu (kilka sekund)
+
+
+JAK ZAMKNĄĆ APLIKACJĘ:
+------------------------
+  Zamknij czarne okno konsoli (lub naciśnij w nim Ctrl+C)
+  Możesz też po prostu zamknąć przeglądarkę — okno konsoli
+  można wtedy zamknąć ręcznie.
+
+
+STRUKTURA PLIKÓW (nie usuwaj żadnego z nich):
+----------------------------------------------
+  ranking.py        — główny kod aplikacji
+  URUCHOM.bat       — plik uruchamiający
+  requirements.txt  — lista bibliotek
+  .streamlit/       — konfiguracja wyglądu
+  .venv/            — środowisko Pythona (tworzone automatycznie)
+
+
+DANE DO ANALIZY:
+-----------------
+  Pliki CSV można pobrać ze strony GUNB:
+  https://wyszukiwarka.gunb.gov.pl/pobranie.html
+
+
+PROBLEMY?
+----------
+  Jeśli aplikacja nie uruchamia się, sprawdź czy Python
+  jest poprawnie zainstalowany poleceniem w wierszu poleceń:
+    python --version
+
+
+====================================================
