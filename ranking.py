@@ -91,6 +91,7 @@ def main():
                 width: 100%;
                 text-align: center;
                 transition: all 0.3s ease;
+            }
             /* Hide original text elements more aggressively */
             [data-testid="stFileUploader"] section > div,
             [data-testid="stFileUploader"] section small,
