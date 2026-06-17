@@ -101,9 +101,9 @@ def main():
                 color: transparent !important;
                 visibility: hidden !important;
             }
-            /* Show ONLY our translated text */
-            [data-testid="stFileUploader"] section > div::before {
-                content: "PRZECIĄGNIJ I UPUŚĆ PLIKI TUTAJ";
+            /* Show ONLY our translated text inside the drag-and-drop zone (first div only to avoid duplicate on drag overlay) */
+            [data-testid="stFileUploader"] section > div:first-of-type::before {
+                content: "PRZECIĄGNIJ PLIKI LUB KLIKNIJ TUTAJ";
                 font-size: 1rem !important;
                 font-weight: 700 !important;
                 color: #374151 !important;
@@ -115,32 +115,9 @@ def main():
                 border-color: #111827;
                 background-color: #f9fafb;
             }
-            /* The button below the zone */
-            [data-testid="stFileUploader"] button {
-                margin-top: 1rem !important;
-                background-color: #374151 !important;
-                color: white !important;
-                border-radius: 6px !important;
-                width: auto !important;
-                visibility: visible !important;
-                font-size: 0 !important; /* Hide original text */
-            }
-            [data-testid="stFileUploader"] button * {
-                font-size: 0 !important;
-                visibility: hidden !important;
-            }
-            [data-testid="stFileUploader"] button::before {
-                content: "PRZEGLĄDAJ PLIKI";
-                font-size: 0.8rem !important;
-                font-weight: 700 !important;
-                padding: 0.5rem 1.5rem !important;
-                visibility: visible !important;
-                line-height: 1.5 !important;
-                display: block !important;
-                color: white !important;
-            }
-            [data-testid="stFileUploader"] button:hover {
-                background-color: #111827 !important;
+            /* Hide the default 'Browse files' button so we only have one click target */
+            [data-testid="stFileUploader"] section > button {
+                display: none !important;
             }
             /* Przywrócono wyświetlanie listy plików i pasków postępu (domyślnie ukryte przez poprzedni CSS) */
             /*
