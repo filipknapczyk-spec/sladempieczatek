@@ -92,22 +92,17 @@ def main():
                 text-align: center;
                 transition: all 0.3s ease;
             }
-            /* Hide original text elements more aggressively (only inside dropzone) */
-            [data-testid="stFileUploader"] section > div,
-            [data-testid="stFileUploader"] section > div small,
-            [data-testid="stFileUploader"] section > div span {
-                font-size: 0 !important;
-                line-height: 0 !important;
-                color: transparent !important;
-                visibility: hidden !important;
+            /* Hide default text elements (Drag & drop text and small limit text) safely without hiding the whole parent div */
+            [data-testid="stFileUploader"] section > div:first-of-type [data-testid="stMarkdownContainer"],
+            [data-testid="stFileUploader"] section > div:first-of-type small {
+                display: none !important;
             }
-            /* Show ONLY our translated text inside the drag-and-drop zone (first div only to avoid duplicate on drag overlay) */
+            /* Show ONLY our translated text inside the drag-and-drop zone */
             [data-testid="stFileUploader"] section > div:first-of-type::before {
                 content: "PRZECIĄGNIJ PLIKI LUB KLIKNIJ TUTAJ";
                 font-size: 1rem !important;
                 font-weight: 700 !important;
                 color: #374151 !important;
-                visibility: visible !important;
                 line-height: 1.5 !important;
                 display: block !important;
             }
