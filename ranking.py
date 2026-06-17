@@ -92,10 +92,10 @@ def main():
                 text-align: center;
                 transition: all 0.3s ease;
             }
-            /* Hide original text elements more aggressively */
+            /* Hide original text elements more aggressively (only inside dropzone) */
             [data-testid="stFileUploader"] section > div,
-            [data-testid="stFileUploader"] section small,
-            [data-testid="stFileUploader"] section span {
+            [data-testid="stFileUploader"] section > div small,
+            [data-testid="stFileUploader"] section > div span {
                 font-size: 0 !important;
                 line-height: 0 !important;
                 color: transparent !important;
@@ -142,13 +142,15 @@ def main():
             [data-testid="stFileUploader"] button:hover {
                 background-color: #111827 !important;
             }
-            /* Hide any remaining default uploader parts */
+            /* Przywrócono wyświetlanie listy plików i pasków postępu (domyślnie ukryte przez poprzedni CSS) */
+            /*
             [data-testid="stFileUploader"] ul {
                 display: none !important;
             }
             [data-testid="stFileUploaderPagination"] {
                 display: none !important;
             }
+            */
             [data-testid="stFileUploader"] [data-testid="stMarkdownContainer"] {
                 /* Optional: hide other status text if needed */
             }
